@@ -5,4 +5,6 @@ module.exports = (app) => {
         message:'Welcome to the Users Api.',
     }));
     app.post('/api/users', usersController.create);
+    app.get('/api/users', usersController.list);
+    app.get('/api/users/:userId', usersController.retrieve);
 }
